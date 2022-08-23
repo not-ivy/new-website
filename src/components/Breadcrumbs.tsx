@@ -1,13 +1,15 @@
-import { useState, useEffect } from 'preact/hooks';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Breadcrumbs() {
-  const [location, setLocation] = useState<Location | undefined>(undefined);
-  useEffect(() => { setLocation(window.location) }, [])
-  if (!location) return (<p>~</p>)
-
-  const breadcrumbs = location.href.replace(location.origin, '~').split('/')
+  const breadcrumbs = useLocation().pathname.split('/');
+  if (!breadcrumbs[0]) { breadcrumbs[0] = '~' }
 
   return (
-    <p>{breadcrumbs.join(' / ')}</p>
+    <div>
+      <p>{breadcrumbs.join(' / ')}</p>
+      <br />
+      <Link to="/">Home</Link>
+      <Link to="/projects">Projects</Link>
+    </div>
   )
 }
