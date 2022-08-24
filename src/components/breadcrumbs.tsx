@@ -4,7 +4,7 @@ import {Link, useLocation} from 'react-router-dom';
 
 const relation: any = {
 	// eslint-disable-next-line @typescript-eslint/naming-convention
-	'~': ['projects', 'contacts'],
+	'~': ['projects', 'socials'],
 };
 
 export default function Breadcrumbs() {

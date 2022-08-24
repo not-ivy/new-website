@@ -1,6 +1,6 @@
 import {Route, Routes} from 'react-router-dom';
 import Breadcrumbs from './components/breadcrumbs';
-import Contacts from './router/contacts';
+import Socials from './router/socials';
 import Home from './router/home';
 import Projects from './router/projects';
 
@@ -12,7 +12,7 @@ export function App() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/projects' element={<Projects />} />
-				<Route path='/contacts' element={<Contacts />} />
+				<Route path='/socials' element={<Socials />} />
 			</Routes>
 		</div>
 	);
