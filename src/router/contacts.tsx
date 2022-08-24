@@ -1,5 +1,5 @@
 import {HiExternalLink, HiKey, HiMail, HiOutlineClipboardCopy} from 'react-icons/hi';
-import {FaDiscord, FaGithub} from 'react-icons/fa';
+import {FaDiscord, FaGithub, FaSteam, FaTwitter} from 'react-icons/fa';
 
 export default function Contacts() {
 	return (
@@ -21,6 +21,14 @@ export default function Contacts() {
 				<button className='flex cursor-pointer focus:text-green-400 transition-colors' onClick={async () => {
 					await navigator.clipboard.writeText('ivy#0404');
 				}}> ivy#0404<HiOutlineClipboardCopy /></button>
+			</span>
+			<span className='flex items-center'>
+				<div className='m-4'><FaTwitter size={30} /></div>
+				<a className='flex focus:text-green-400 transition-colors' href='https://twitter.com/ivy_reset'>ivy_reset<HiExternalLink /></a>
+			</span>
+			<span className='flex items-center'>
+				<div className='m-4'><FaSteam size={30} /></div>
+				<a className='flex focus:text-green-400 transition-colors' href='https://steamcommunity.com/id/not-ivy/'>not-ivy<HiExternalLink /></a>
 			</span>
 		</div>
 	);
