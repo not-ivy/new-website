@@ -4,8 +4,7 @@ import {Link, useLocation} from 'react-router-dom';
 
 const relation: any = {
 	// eslint-disable-next-line @typescript-eslint/naming-convention
-	'~': ['projects', 'stuff'],
-	projects: ['asdasdas', 'asdads'],
+	'~': ['projects', 'contacts'],
 };
 
 export default function Breadcrumbs() {
@@ -27,12 +26,13 @@ export default function Breadcrumbs() {
 
 		linkBreadcrumbs.push(<Link to={`/${b}`}>&nbsp;/&nbsp;{b}</Link>);
 	}
+
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	const linkedPages: string[] = relation[breadcrumbs[breadcrumbs.length - 1]];
 	if (linkedPages) {
-		linkBreadcrumbs.push(<div className='inline-flex flex-col text-gray-300'>{
+		linkBreadcrumbs.push(<div className='inline-flex flex-col text-gray-400'>{
 			linkedPages.map((p: string) => (
-				<Link to={`/${p}`}>&nbsp;/&nbsp;{p}</Link>
+				<div className='hover:dark:text-white hover:text-black transition-colors'><Link to={`/${p}`}>&nbsp;/&nbsp;{p}</Link></div>
 			))
 		}</div>);
 	}
