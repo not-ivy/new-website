@@ -1,20 +1,21 @@
 import {HiExternalLink, HiKey, HiMail, HiOutlineClipboardCopy} from 'react-icons/hi';
 import {FaDiscord, FaGithub, FaSteam, FaTwitter} from 'react-icons/fa';
+import LinkIcon from '../components/link-icon';
 
 export default function Contacts() {
 	return (
 		<div>
 			<span className='flex items-center'>
 				<div className='m-4'><FaGithub size={30} /></div>
-				<a className='flex focus:text-green-400 transition-colors' href='https://github.com/not-ivy'>not-ivy<HiExternalLink /></a>
+				<LinkIcon href='https://github.com/not-ivy'>not-ivy</LinkIcon>
 			</span>
 			<span className='flex items-center'>
 				<div className='m-4'><HiKey size={30} /></div>
-				<a className='flex focus:text-green-400 transition-colors' href='https://keys.openpgp.org/vks/v1/by-fingerprint/2377F28C8BDC3BB7CDE8337CD2A1D05E1B5EAA32'>2377F28C8BDC3BB7CDE8337CD2A1D05E1B5EAA32 <HiExternalLink /></a>
+				<LinkIcon href='https://keys.openpgp.org/vks/v1/by-fingerprint/2377F28C8BDC3BB7CDE8337CD2A1D05E1B5EAA32'>2377F28C8BDC3BB7CDE8337CD2A1D05E1B5EAA32</LinkIcon>
 			</span>
 			<span className='flex items-center'>
 				<div className='m-4'><HiMail size={30} /></div>
-				<a className='flex focus:text-green-400 transition-colors' href='mailto:ivy@not-ivy.dev'>ivy@not-ivy.dev<HiExternalLink /></a>
+				<LinkIcon href='mailto:ivy@not-ivy.dev'>ivy@not-ivy.dev</LinkIcon>
 			</span>
 			<span className='flex items-center'>
 				<div className='m-4'><FaDiscord size={30} /></div>
@@ -24,11 +25,11 @@ export default function Contacts() {
 			</span>
 			<span className='flex items-center'>
 				<div className='m-4'><FaTwitter size={30} /></div>
-				<a className='flex focus:text-green-400 transition-colors' href='https://twitter.com/ivy_reset'>ivy_reset<HiExternalLink /></a>
+				<LinkIcon href='https://twitter.com/ivy_reset'>ivy_reset</LinkIcon>
 			</span>
 			<span className='flex items-center'>
 				<div className='m-4'><FaSteam size={30} /></div>
-				<a className='flex focus:text-green-400 transition-colors' href='https://steamcommunity.com/id/not-ivy/'>not-ivy<HiExternalLink /></a>
+				<LinkIcon href='https://steamcommunity.com/id/not-ivy/'>not-ivy</LinkIcon>
 			</span>
 		</div>
 	);
