@@ -30,7 +30,7 @@ export default function Breadcrumbs() {
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	const linkedPages: string[] = relation[breadcrumbs[breadcrumbs.length - 1]];
 	if (linkedPages) {
-		linkBreadcrumbs.push(<div className='inline-flex flex-col text-gray-600 dark:text-gray-400'>{
+		linkBreadcrumbs.push(<div className='inline-flex flex-col text-zinc-600 dark:text-zinc-400'>{
 			linkedPages.map((p: string) => (
 				<div className='hover:dark:text-white hover:text-black transition-colors'><Link to={`/${p}`}>&nbsp;/&nbsp;{p}</Link></div>
 			))

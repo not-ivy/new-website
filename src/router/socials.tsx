@@ -5,7 +5,7 @@ import LinkIcon from '../components/link-icon';
 export default function Socials() {
 	return (
 		<div>
-			<span className='flex items-center hover:text-gray-800 transition-colors'>
+			<span className='flex items-center hover:text-zinc-800 transition-colors'>
 				<div className='m-4'><FaGithub size={30} /></div>
 				<LinkIcon href='https://github.com/not-ivy'>not-ivy</LinkIcon>
 			</span>
