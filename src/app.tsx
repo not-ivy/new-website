@@ -6,6 +6,7 @@ import Socials from './router/socials';
 import Home from './router/home';
 import Projects from './router/projects';
 import Wiki from './router/wiki/index.mdx';
+import Test from './router/wiki/test.mdx';
 
 export function App() {
 	const [flagVisibility, setVisibility] = useState(false);
@@ -18,6 +19,7 @@ export function App() {
 				<Route path='/projects' element={<Projects />} />
 				<Route path='/socials' element={<Socials />} />
 				<Route path='/wiki' element={<Wiki />} />
+				<Route path='/wiki/test' element={<Test />} />
 			</Routes>
 			<div id='bottom' className={`${flagVisibility ? 'w-screen' : 'w-0'} absolute bottom-0 left-0 h-2 transition-all`}></div>
 		</div>
