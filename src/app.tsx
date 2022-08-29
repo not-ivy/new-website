@@ -4,7 +4,7 @@ import {Route, Routes} from 'react-router-dom';
 import Breadcrumbs from './components/breadcrumbs';
 import Socials from './router/socials';
 import Home from './router/home';
-import Projects from './router/projects';
+import Projects from './router/projects.mdx';
 import Wiki from './router/wiki/index.mdx';
 import Test from './router/wiki/test.mdx';
 
