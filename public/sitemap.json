@@ -2,9 +2,9 @@
   "~": [
     "projects",
     "socials",
-    "wiki"
+    "blog"
   ],
-  "wiki": [
+  "blog": [
     "test"
   ]
 }
