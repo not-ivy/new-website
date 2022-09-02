@@ -5,8 +5,8 @@ import Breadcrumbs from './components/breadcrumbs';
 import Socials from './router/socials';
 import Home from './router/home';
 import Projects from './router/projects.mdx';
-import Wiki from './router/wiki/index.mdx';
-import Test from './router/wiki/test.mdx';
+import Wiki from './router/blog/index.mdx';
+import Test from './router/blog/test.mdx';
 
 export function App() {
 	const [flagVisibility, setVisibility] = useState(false);
@@ -18,8 +18,8 @@ export function App() {
 				<Route path='/' element={<Home state={flagVisibility} setState={setVisibility} />} />
 				<Route path='/projects' element={<Projects />} />
 				<Route path='/socials' element={<Socials />} />
-				<Route path='/wiki' element={<Wiki />} />
-				<Route path='/wiki/test' element={<Test />} />
+				<Route path='/blog' element={<Wiki />} />
+				<Route path='/blog/test' element={<Test />} />
 			</Routes>
 			<div id='bottom' className={`${flagVisibility ? 'w-screen' : 'w-0'} absolute bottom-0 left-0 h-2 transition-all`}></div>
 		</div>
