@@ -20,8 +20,8 @@ export default function Socials() {
 			<span className='flex items-center hover:text-blue-600 transition-colors'>
 				<div className='m-4'><FaDiscord size={30} /></div>
 				<button className='flex cursor-pointer focus:text-green-400 transition-colors' onClick={async () => {
-					await navigator.clipboard.writeText('ivy#0404');
-				}}> ivy#0404<HiOutlineClipboardCopy /></button>
+					await navigator.clipboard.writeText('ivymkii#0004');
+				}}> ivymkii#0004<HiOutlineClipboardCopy /></button>
 			</span>
 			<span className='flex items-center hover:text-sky-500 transition-colors'>
 				<div className='m-4'><FaTwitter size={30} /></div>
