@@ -2,7 +2,7 @@ import ExternalLink from "../ui/icons/ExternalLink";
 
 export default function ProjectsSection() {
   return (
-    <div className="w-screen-sm mx-auto text-left text-lg">
+    <div>
       WIP
       <h3 className="text-3xl font-semibold mb-2 font-mono"><a href="https://github.com/not-ivy/melon" className="hover:underline">Melon<sup><ExternalLink /></sup></a></h3>
       <p>

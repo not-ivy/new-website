@@ -7,9 +7,9 @@ import SocialsSection from "./pages/SocialSection";
 
 export function App() {
   return (
-    <main className="p-4 font-sans">
+    <main className="p-10 mx-auto max-w-screen-sm font-sans">
       <Navbar />
-      <hr className="my-8 w-screen-sm mx-auto border-2 dark:border-palette-white border-palette-black" />
+      <hr className="my-8 border-2 dark:border-palette-white border-palette-black" />
       <Router>
         <Route path="/" component={HomeSection} />
         <Route path="/knowledge" component={KnowledgeSection} />

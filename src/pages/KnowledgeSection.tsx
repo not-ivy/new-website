@@ -3,9 +3,9 @@ import ExternalLink from "../ui/icons/ExternalLink";
 
 export default function KnowledgeSection() {
   return (
-    <div className="w-screen-sm mx-auto">
-      <h3 className="text-2xl mb-2 font-semibold font-mono">Languages</h3>
-      <p className="text-lg">
+    <div>
+      <h3 className="text-xl md:text-2xl mb-2 font-semibold font-mono">Languages</h3>
+      <p className="text-base md:text-lg">
         My primary languages are <span className="text-palette-magenta">TypeScript</span> and <span className="text-palette-magenta">JavaScript</span>,
         which are primarly used for web development, although sometimes I make libaries or discord bots with them.<br />
         I also have some knowledge of <span className="text-palette-yellow">Rust</span> which were used for some simple tools and backend services.<br />
@@ -15,8 +15,8 @@ export default function KnowledgeSection() {
 
       <br />
 
-      <h3 className="text-2xl mb-2 font-semibold font-mono">Tools</h3>
-      <p className="text-lg">
+      <h3 className="text-xl md:text-2xl mb-2 font-semibold font-mono">Tools</h3>
+      <p className="text-base md:text-lg">
         Almost all of my projects are made using <span className="text-palette-magenta">React</span> and <span className="text-palette-magenta">TypeScript</span> with <span className="text-palette-magenta">Node.js</span>.<br />
         The first CSS framework that I started using was <span className="text-palette-cyan">Tailwind CSS</span>.<br />
         Currently though, I prefer using <span className="text-palette-yellow">twind</span> or <span className="text-palette-yellow">unocss</span> due to
@@ -32,8 +32,8 @@ export default function KnowledgeSection() {
 
       <br />
 
-      <h3 className="text-2xl mb-2 font-semibold font-mono">Other</h3>
-      <p className="text-lg">
+      <h3 className="text-xl md:text-2xl mb-2 font-semibold font-mono">Other</h3>
+      <p className="text-base md:text-lg">
         I have some experience with <span className="text-palette-yellow">Linux</span>.<br />
         I am using <span className="text-palette-cyan">Git</span> for version control,
         and host most of my projects on <span className="text-palette-cyan">GitHub</span>.<br />
