@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import { readFileSync } from 'node:fs';
 import preact from '@preact/preset-vite'
 import Unocss from 'unocss/vite'
 import presetMini from '@unocss/preset-mini'
@@ -7,12 +6,6 @@ import presetWebFonts from '@unocss/preset-web-fonts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: {
-    target: 'esnext',
-  },
-  optimizeDeps: {
-    disabled: false,
-  },
   plugins: [
     preact(),
     Unocss({
