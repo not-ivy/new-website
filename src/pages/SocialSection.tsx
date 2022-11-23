@@ -1,7 +1,9 @@
+import WorkInProgress from "../ui/WorkInProgress";
+
 export default function SocialsSection() {
   return (
     <div>
-      WIP
+      <WorkInProgress />
     </div>
   )
 }
