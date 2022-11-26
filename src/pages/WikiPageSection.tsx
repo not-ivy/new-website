@@ -1,5 +1,5 @@
-import { useEffect, useState } from "preact/hooks";
 import ErrorSplash from "../ui/ErrorSplash";
+import { Suspense, lazy } from 'preact/compat';
 
 export interface Props {
   params: {
@@ -10,25 +10,11 @@ export interface Props {
 export default function WikiPageSection({ params }: Props) {
   const { page } = params;
 
-  const [wiki, setWiki] = useState<string | undefined | Error>(undefined);
-
-  useEffect(() => {
-    fetch(`/wiki/${page}.txt`)
-      .then((res) => {
-        if (res.status === 404) throw new Error("Page not found");
-        return res.text();
-      })
-      .then((text) => setWiki(text))
-      .catch((err) => setWiki(err));
-  }, []);
-
-  if (!wiki) return <h1>Loading...</h1>;
-  if (wiki instanceof Error) return <ErrorSplash message={wiki.message} />;
+  const WikiPage = lazy(() => import(/* @vite-ignore */ `./wiki/${page}.tsx`));
 
   return (
-    <div>
-      <h3>{page}</h3>
-      {wiki}
-    </div>
+    <Suspense fallback={<></>}>
+      <WikiPage />
+    </Suspense>
   )
 }

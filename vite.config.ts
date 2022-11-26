@@ -3,6 +3,19 @@ import preact from '@preact/preset-vite'
 import Unocss from 'unocss/vite'
 import presetMini from '@unocss/preset-mini'
 import presetWebFonts from '@unocss/preset-web-fonts'
+import fs from 'node:fs';
+
+let metadatafile = {};
+
+fs.readdirSync('./src/pages/wiki').forEach((file) => {
+  let path = `./src/pages/wiki/${file}`;
+  metadatafile[file.replace('.tsx', '')] = {
+    created: fs.statSync(path).birthtime,
+    edited: fs.statSync(path).mtime,
+  }
+});
+
+fs.writeFileSync('./public/wiki.json', JSON.stringify(metadatafile));
 
 // https://vitejs.dev/config/
 export default defineConfig({
