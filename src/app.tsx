@@ -6,11 +6,16 @@ import ProjectsSection from "./pages/ProjectsSection";
 import SocialsSection from "./pages/SocialSection";
 import WikiPageSection from "./pages/WikiPageSection";
 import WikiIndexSection from "./pages/WikiIndexSection";
+import Controls from "./ui/Controls";
+import { useState } from "preact/hooks";
 
 export function App() {
+  const [collapsed, setCollapsed] = useState(true);
+
   return (
     <main className="p-10 mx-auto max-w-screen-sm font-sans">
-      <Navbar />
+      <Controls collapsed={collapsed} setCollapsed={setCollapsed} />
+      <Navbar collapsed={collapsed} />
       <hr className="my-8 border-2 dark:border-palette-white border-palette-black" />
       <Router>
         <Route path="/" component={HomeSection} />

@@ -1,8 +1,13 @@
 import { useEffect, useState } from 'preact/hooks';
 import ColorLink from "./ColorLink";
 
-export default function Navbar() {
+export interface Props {
+  collapsed: boolean;
+}
+
+export default function Navbar({ collapsed }: Props) {
   const [phrases, setPhrases] = useState<string[] | undefined>(undefined);
+
   useEffect(() => {
     fetch('/ivy.txt')
       .then((res) => res.text())
@@ -12,7 +17,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="flex justify-between items-center">
+    <div className={`justify-between items-center ${collapsed ? 'hidden' : 'flex'}`}>
       <div className="font-mono flex flex-col">
         {
           phrases ? phrases[Math.floor(Math.random() * phrases.length)].split(' ').map((word, j) => (

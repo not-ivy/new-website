@@ -42,7 +42,10 @@ export default defineConfig({
             yellow: "#e6f697",
           }
         }
-      }
+      },
+      rules: [
+        ['backdrop-brighten', { 'backdrop-filter': 'brightness(1.25)'}]
+      ]
     }),
   ],
 })
