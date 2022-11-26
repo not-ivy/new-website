@@ -239,11 +239,6 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@builder.io/partytown@^0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.2.tgz#012d0dc5458af07079849f09567fcbf058a72d46"
-  integrity sha512-TmRHuN4gdsOJxBGsPPirJAMuXDm0o9cx9t5ltSson+F+K5ES3eNiBCxBGvSSkoEARvZ+kl1n7WVi+8qNyJdeAQ==
-
 "@esbuild/android-arm@0.15.15":
   version "0.15.15"
   resolved "https://registry.yarnpkg.com/@esbuild/android-arm/-/android-arm-0.15.15.tgz#35b3cc0f9e69cb53932d44f60b99dd440335d2f0"

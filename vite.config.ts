@@ -3,8 +3,6 @@ import preact from '@preact/preset-vite'
 import Unocss from 'unocss/vite'
 import presetMini from '@unocss/preset-mini'
 import fs from 'node:fs';
-import path from 'node:path';
-import { partytownVite } from '@builder.io/partytown/utils';
 
 let metadatafile = {};
 
@@ -21,9 +19,6 @@ fs.writeFileSync('./public/wiki.json', JSON.stringify(metadatafile));
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    partytownVite({
-      dest: path.join(__dirname, 'dist', '~partytown'),
-    }),
     preact(),
     Unocss({
       presets: [
