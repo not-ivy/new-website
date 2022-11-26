@@ -24,7 +24,7 @@ export default function KnowledgeSection() {
         For web frameworks, I prefer using <span className="text-palette-magenta">Fresh</span>, and for
         side/simple projects, I use <span className="text-palette-magenta">Vite</span>.<br />
         However, I have knowledge of <span className="text-palette-yellow">Next.js</span>, and have used it for multiple&nbsp;
-        <Link to="/projects"><span className="text-palette-yellow hover:underline">projects</span><sup><ExternalLink /></sup></Link>.<br />
+        <Link to="/projects"><span className="text-palette-yellow hover:underline">projects</span><sup><ExternalLink className="w-5 h-5 inline" /></sup></Link>.<br />
         For backend tools, I have used <span className="text-palette-magenta">Express</span> and <span className="text-palette-magenta">Fastify</span>.<br />
         I have also used <span className="text-palette-cyan">Deno</span> for a few projects, and used <span className="text-palette-cyan">SQLite</span> for databases.<br />
         For ORM, I usually use <span className="text-palette-magenta">Prisma</span>.<br />

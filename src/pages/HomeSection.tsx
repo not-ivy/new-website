@@ -6,9 +6,9 @@ export default function HomeSection() {
     <div className="text-right text-3xl">
       <h2 className="mb-2">Hi, my name is <span className="text-palette-yellow">ivy</span>.</h2>
       <ul className="text-base flex items-center justify-end gap-x-2">
-        <li className="text-palette-cyan flex items-center"><Identification /><span>they/them</span></li>
+        <li className="text-palette-cyan flex items-center gap-x-2"><Identification className="w-5 h-5" /><span>they/them</span></li>
         <li className="select-none">|</li>
-        <li className="text-palette-magenta flex items-center"><BuildingOffice /><span>Project Sparrow</span></li>
+        <li className="text-palette-magenta flex items-center gap-x-2"><BuildingOffice className="w-5 h-5" /><span>Project Sparrow</span></li>
       </ul>
       
       <br /><br />
