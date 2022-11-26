@@ -16,9 +16,9 @@ export default function Navbar() {
       <div className="font-mono flex flex-col">
         {
           phrases ? phrases[Math.floor(Math.random() * phrases.length)].split(' ').map((word, j) => (
-            <span>
-              <span className="text-palette-magenta text-xl" key={`${j}1`}>{word[0].toUpperCase()}</span>
-              <span className="inline text-base" key={`${j}2`}>{word.substring(1)}</span>
+            <span className="text-lg">
+              <span className="text-palette-magenta" key={`${j}1`}>{word[0].toUpperCase()}</span>
+              <span className="inline" key={`${j}2`}>{word.substring(1)}</span>
             </span>
           )) : (
             <>
@@ -29,11 +29,12 @@ export default function Navbar() {
           )
         }
       </div>
-      <ul className="flex flex-col items-end font-mono text-xl">
+      <ul className="flex flex-col items-end font-mono text-lg">
         <li><ColorLink href="/" label="Home" /></li>
         <li><ColorLink href="/knowledge" label="Knowledge" /></li>
         <li><ColorLink href="/projects" label="Projects" /></li>
         <li><ColorLink href="/socials" label="Socials" /></li>
+        <li><ColorLink href="/wiki" label="Wiki" /></li>
       </ul>
     </div>
   )

@@ -4,6 +4,7 @@ import HomeSection from "./pages/HomeSection";
 import Navbar from "./ui/Navbar";
 import ProjectsSection from "./pages/ProjectsSection";
 import SocialsSection from "./pages/SocialSection";
+import WikiPageSection from "./pages/WikiPageSection";
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
         <Route path="/knowledge" component={KnowledgeSection} />
         <Route path="/projects" component={ProjectsSection} />
         <Route path="/socials" component={SocialsSection} />
+        <Route path="/wiki/:page" component={WikiPageSection} />
       </Router>
     </main>
   )
