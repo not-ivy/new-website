@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import preact from '@preact/preset-vite'
 import Unocss from 'unocss/vite'
 import presetMini from '@unocss/preset-mini'
-import presetWebFonts from '@unocss/preset-web-fonts'
 import fs from 'node:fs';
 
 let metadatafile = {};
@@ -24,13 +23,6 @@ export default defineConfig({
     Unocss({
       presets: [
         presetMini({ dark: 'media' }),
-        presetWebFonts({
-          provider: 'google',
-          fonts: {
-            sans: 'Manrope',
-            mono: 'Major Mono Display',
-          }
-        }),
       ],
       theme: {
         colors: {
@@ -41,7 +33,11 @@ export default defineConfig({
             magenta: "#dfa1ff",
             yellow: "#e6f697",
           }
-        }
+        },
+        fontFamily: {
+          sans: 'Manrope, ui-sans-serif, sans-serif',
+          mono: 'Major Mono Display, ui-monospace, monospace',
+        },
       },
       rules: [
         ['backdrop-brighten', { 'backdrop-filter': 'brightness(1.25)'}]

@@ -494,7 +494,7 @@
     "@unocss/preset-mini" "0.46.5"
     "@unocss/preset-wind" "0.46.5"
 
-"@unocss/preset-web-fonts@0.46.5", "@unocss/preset-web-fonts@^0.46.5":
+"@unocss/preset-web-fonts@0.46.5":
   version "0.46.5"
   resolved "https://registry.yarnpkg.com/@unocss/preset-web-fonts/-/preset-web-fonts-0.46.5.tgz#32672d2beb04a56f127e1fca91b8198c91e746e1"
   integrity sha512-ITOtD9AeklSqsVzBlK6wKbABQnD1o9wubN4bGkz7cd0G0GEt7YkW9dYwmXPYqo9Stoga92MJPy/Z2mxKT0ejVw==
