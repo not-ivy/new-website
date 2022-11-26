@@ -24,11 +24,13 @@ export default function WikiIndexSection() {
       <ul>
         {
           Object.keys(metadata).map((page, index) => (
-            <li className="flex gap-x-2 items-baseline">
-              <span className="font-mono text-base md:text-lg">{alphabet[index % 26].toUpperCase()}:</span>
-              <Link to={`/wiki/${page}`} key={index}>
-                <span className="underline cursor-pointer text-base md:text-lg">{page}</span>
-              </Link>
+            <li className="flex justify-between items-baseline">
+              <div>
+                <span className="font-mono text-base md:text-lg mr-2">{alphabet[index % 26].toUpperCase()}:</span>
+                <Link to={`/wiki/${page}`} key={index}>
+                  <span className="underline cursor-pointer text-base md:text-lg">{page}</span>
+                </Link>
+              </div>
               <div className="flex gap-x-2 text-xs md:text-sm items-center text-gray">
                 <span>Created: {formatDateFromString(locales, metadata[page].created)}</span>
                 <span>|</span>

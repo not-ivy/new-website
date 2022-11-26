@@ -7,5 +7,5 @@ export const fetchWikiMetadata = async (entry: string) => {
 }
 
 export const formatDateFromString = (locales: string[], date: string) => {
-  return Intl.DateTimeFormat(locales, { dateStyle: 'long' }).format(new Date(date));
+  return Intl.DateTimeFormat(locales, { dateStyle: 'medium' }).format(new Date(date));
 }
