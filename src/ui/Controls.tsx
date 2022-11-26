@@ -23,7 +23,7 @@ export default function Controls({ collapsed, setCollapsed }: Props) {
   return (
     <div className={`flex items-center ${collapsed ? 'justify-between' : 'justify-end'} gap-x-4 mb-4`}>
       <span className={collapsed ? 'shown' : 'hidden'} ref={timeRef} />
-      <button className="hover:text-palette-cyan" onClick={() => { setCollapsed(!collapsed) }}>
+      <button aria-label="Collapse Navbar" className="hover:text-palette-cyan" onClick={() => { setCollapsed(!collapsed) }}>
         {
           collapsed ? (
             <BarsArrowDown className="w-6 h-6" />
