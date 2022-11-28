@@ -39,9 +39,6 @@ export default defineConfig({
           mono: 'Major Mono Display, ui-monospace, monospace',
         },
       },
-      rules: [
-        ['backdrop-brighten', { 'backdrop-filter': 'brightness(1.25)'}]
-      ]
     }),
   ],
 })
