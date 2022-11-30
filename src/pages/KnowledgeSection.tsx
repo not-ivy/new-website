@@ -39,7 +39,7 @@ export default function KnowledgeSection() {
         and host most of my projects on <span className="text-palette-cyan">GitHub</span>.<br />
         Almost every discord bot that I made uses <span className="text-palette-yellow">Discord.js</span>.<br />
         Other than programming, I use <span className="text-palette-magenta">FL Studio</span> and <span className="text-palette-magenta">SunVox</span>&nbsp;
-        for music production, and use <span className="text-palette-magenta">Flat</span> for composing.<br />
+        for music production, and use <span className="text-palette-magenta">lilypond</span> for composing.<br />
       </p>
     </div>
   )
