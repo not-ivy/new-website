@@ -40,11 +40,7 @@ export default function WikiPage({
           href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-one-light.min.css"
         />
         <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js" />
-        <script
-          src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js"
-          async
-          defer
-        />
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js" />
         <title>{data.title}</title>
       </Head>
       <main dangerouslySetInnerHTML={{ __html: data.content }} class="p-10" />
