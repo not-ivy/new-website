@@ -5,7 +5,6 @@ export default function App(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Ivy</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -16,7 +15,6 @@ export default function App(props: AppProps) {
           href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href="/styles/utils.css" />
       </Head>
       <props.Component />
     </>
