@@ -1,25 +1,7 @@
-import type { Handlers, PageProps } from "$fresh/server.ts";
 import IconChevronLeft from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/chevron-left.tsx";
 import { Head } from "$fresh/runtime.ts";
 
-interface IWikiEntry {
-  name: string;
-  mtime: Date | null;
-}
-
-export const handler: Handlers<IWikiEntry[]> = {
-  GET(_, ctx) {
-    const files = [...Deno.readDirSync("./routes/wiki")]
-      .filter((file) => file.isFile && file.name.endsWith(".md"))
-      .map((file) => ({
-        name: file.name.replace(".md", ""),
-        mtime: Deno.statSync(`./routes/wiki/${file.name}`).mtime,
-      }));
-    return ctx.render(files);
-  },
-};
-
-export default function Wiki({ data }: PageProps<IWikiEntry[]>) {
+export default function Wiki() {
   return (
     <>
       <Head>
@@ -35,18 +17,11 @@ export default function Wiki({ data }: PageProps<IWikiEntry[]>) {
         </a>
         <hr class="border-dashed my-8" />
         <ul class="list-disc">
-          {data.map((file) => (
-            <li>
-              <span class="flex items-center justify-between">
-                <a href={`/wiki/${file.name}`} class="hover:underline">
-                  {file.name}
-                </a>
-                <span class="text-sm">
-                  Last modified: {file.mtime?.toLocaleString()}
-                </span>
-              </span>
-            </li>
-          ))}
+          <li>
+            <a href="/wiki/test" class="hover:underline">
+              test
+            </a>
+          </li>
         </ul>
       </main>
     </>
