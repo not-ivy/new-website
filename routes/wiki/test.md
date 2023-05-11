@@ -51,4 +51,5 @@ export default function addition(a: number, b: number) {
 
 ## Image
 
-![Image](https://picsum.photos/200/300)
+![Image](https://picsum.photos/200/300) _a random image generated from
+[picsum.photos](https://picsum.photos)_
