@@ -25,7 +25,7 @@ export default function Projects() {
         <div>
           <img
             src="/melon.webp"
-            class="rounded-lg shadow-lg"
+            class="rounded-lg shadow-lg w-full h-auto"
             alt="A screenshot of the landing page of melon; a link shortener"
           />
           <a href="https://m.not-ivy.dev">
@@ -52,7 +52,7 @@ export default function Projects() {
         <div class="mt-8">
           <img
             src="/sparrow.webp"
-            class="rounded-lg shadow-lg"
+            class="rounded-lg shadow-lg w-full h-auto"
             alt="A screenshot of the landing page of project sparrow; a social media platform."
           />
           <a href="https://sparrowsocial.com">
