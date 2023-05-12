@@ -22,16 +22,37 @@ export const handler: Handlers<IMarkdownDocument | null> = {
         content,
       });
     } catch (e) {
-      console.log(e);
-      return ctx.render(e.message);
+      if (e.code === "ENOENT") return ctx.render(null);
+      return ctx.render(e);
     }
   },
 };
 
 export default function WikiPage({
   data,
-}: PageProps<IMarkdownDocument | null>) {
-  return data ? (
+}: PageProps<IMarkdownDocument | null | Error>) {
+  if (data instanceof Error) {
+    return (
+      <>
+        <Head>
+          <title>500 Internal Server Error</title>
+        </Head>
+        <main class="w-screen h-screen flex justify-center items-center flex-col gap-y-4">
+          <h1 class="font-medium text-5xl">500 Internal Service Error</h1>
+          <h2 class="font-medium text-lg">¯\_(ツ)_/¯</h2>
+          <pre class="text-red-500">{data.stack}</pre>
+        </main>
+      </>
+    );
+  }
+  if (!data) {
+    return (
+      <Head>
+        <meta http-equiv="refresh" content="0; url=/404" />
+      </Head>
+    );
+  }
+  return (
     <>
       <Head>
         <link rel="stylesheet" href="/styles/markdown.css" />
@@ -45,9 +66,5 @@ export default function WikiPage({
       </Head>
       <main dangerouslySetInnerHTML={{ __html: data.content }} class="p-10" />
     </>
-  ) : (
-    <Head>
-      <meta http-equiv="refresh" content="0; url=/404" />
-    </Head>
   );
 }
