@@ -18,10 +18,8 @@ export default function Home() {
           src="https://avatars.githubusercontent.com/u/47074495"
           class="w-24 h-auto rounded-full mx-auto mb-2 select-none"
         />
-        <h1 class="text-center text-xl font-medium">
-          ivy / <span class="text-gray-400">nora</span>
-        </h1>
-        <h2 class="text-center text-sm">they/its</h2>
+        <h1 class="text-center text-xl font-medium">ivy</h1>
+        <h2 class="text-center text-sm">they/them</h2>
         <div class="flex items-center max-w-min mx-auto gap-x-8 my-3">
           <a href="https://github.com/not-ivy" title="GitHub Profile">
             <IconBrandGithub class="w-6 h-auto" />
@@ -29,7 +27,7 @@ export default function Home() {
           <a href="https://sr.ht/~apocalypse" title="Sourcehut Profile">
             <IconCircle class="w-6 h-auto" />
           </a>
-          <DiscordCopy content="ivymkii#0004" />
+          <DiscordCopy content="lost_centauri" />
           <a
             href="https://steamcommunity.com/id/not-ivy/"
             title="Steam Profile"

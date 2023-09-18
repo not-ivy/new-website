@@ -6,7 +6,7 @@ export default function App({ Component }: AppProps) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>new-website</title>
+        <title>ivy</title>
       </head>
       <body>
         <Component />
