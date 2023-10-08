@@ -3,10 +3,10 @@
   "license": "CC0-1.0",
   "packageManager": "yarn@4.0.0-rc.53",
   "scripts": {
-    "build": "rm -rf pages && mkdir -p pages/static && yarn copy-static && concurrently \"npm:build-*\"",
-    "build-css": "purgecss --css static/missing.min.css --content index.html --output pages/static",
-    "build-html": "html-minifier-terser --collapse-whitespace --remove-comments index.html -o pages/index.html",
-    "copy-static": "cp -R static pages/"
+    "build": "rm -rf docs && mkdir -p docs/static && yarn copy-static && concurrently \"npm:build-*\"",
+    "build-css": "purgecss --css static/missing.min.css --content index.html --output docs/static",
+    "build-html": "html-minifier-terser --collapse-whitespace --remove-comments index.html -o docs/index.html",
+    "copy-static": "cp -R static docs/"
   },
   "devDependencies": {
     "concurrently": "^8.2.1",
