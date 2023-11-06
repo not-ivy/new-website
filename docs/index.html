@@ -11,7 +11,7 @@
 <body>
   <main class="mono-font">
     <h1 class="mono-font">ivy</h1>
-    <small class="sub-title">also known as nora | they/them | UTC-08:00 | <a href="https://github.com/sponsors/not-ivy">sponsor me 🥺</a></small>
+    <small class="sub-title">also known as nora | they/them | UTC-08:00 | <a href="https://github.com/sponsors/not-ivy">sponsor me</a></small>
     <hr />
     <span>hi, i make things.</span>
 
@@ -31,7 +31,25 @@
       <li><b>discord:</b>&nbsp;&nbsp;<a href="https://discord.com/users/557429876618166283">lost_centauri</a></li>
       <li><b>bluesky:</b>&nbsp;&nbsp;<a href="https://bsky.app/profile/not-ivy.dev">@not-ivy.dev</a></li>
     </ul>
+
+    <h3 class="mono-font">sponsors (thank you so much!!):</h3>
+    <ul id="sponsors"></ul>
   </main>
+
+  <script>
+    const sponsorElement = document.getElementById('sponsors');
+
+    fetch('https://ghs.vercel.app/sponsors/not-ivy')
+      .then((res) => res.json())
+      .then(({sponsors}) => {
+        console.log(sponsors)
+        sponsors.forEach((sponsor) => {
+          const child = document.createElement('li');
+          child.innerHTML = `<a href="${sponsor.details.html_url}">${sponsor.handle}</a>`
+          sponsorElement.appendChild(child)
+        })
+      })
+  </script>
 </body>
 
 </html>
